@@ -13,13 +13,15 @@ class CustomSMTPServer(smtpd.SMTPServer):
         print data[:512]
 
 
-def main():
-    if len(sys.argv) > 2:
-        bind = sys.argv[2]
+def main(*args):
+    if len(args) == 0:
+        args = sys.argv[1:]
+    if len(args) > 1:
+        bind = args[1]
     else:
         bind = '127.0.0.1'
 
-    port = int(sys.argv[1])
+    port = int(args[0])
 
     server = CustomSMTPServer((bind, port), None)
     asyncore.loop()
