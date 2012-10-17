@@ -12,7 +12,7 @@ Using with buildout
 If you use mr.developer, add it to your sources:
 
 [sources]
-ib.fakesmtpd = git git@github.com:izak/ib.fakesmtpd.git
+ib.fakesmtpd = git git://github.com/izak/ib.fakesmtpd.git
 
 Then add this to buildout (and add smtpd to buildout::parts):
 
