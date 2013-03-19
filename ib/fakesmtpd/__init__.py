@@ -10,7 +10,8 @@ class CustomSMTPServer(smtpd.SMTPServer):
         print 'Message addressed to  :', rcpttos
         print 'Message length        :', len(data)
         print '--- '
-        print data[:512]
+        print data
+        print '--- '
 
 
 def main(*args):
